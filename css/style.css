@@ -12,7 +12,13 @@ reset
 /* 
 general
  */
+body{
+   color: white;
+}
 
+img{
+   max-width: 100%;
+}
 
 
   /* Custom properties ( oppure variabili) */
@@ -27,34 +33,95 @@ general
 /* LAYOUT */
 
 .container{
+   max-width: 1500px;
+   margin: 0 auto;
+   background-color: YELLOW;
+}
+.spotify-top{
+   display: flex;
+   min-height: calc( 100vh - 200px );
+}
+.sidebar{
+   background-color: #000000;
+   width: 350px 
+}
+
+.spotify-center{
+   background-color: #141922;
+   width: calc(100% - 350px);
+
+}
+.spotify-bottom{
+   background-color: #272727;
+   height: 200px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20px;
+}
+
+
+
+
+
+
+
+/* SPOTIFY-BOTTOM*/
+
+.spotify-bottom-left{
+  display: flex;
+  align-items: center;
+}
+
+.spotify-bottom-left img{
+   max-width: 100px;
+   filter:grayscale(1) ;
+}
+
+.spotify-bottom-left > *{
+   margin-right: 20px;
+}
+.spotify-bottom-left p , .spotify-bottom-left i{
+   opacity: 0.7;
+}
+.spotify-bottom-left span{
+   margin-right: 60px;
+}
+
+.spotify-bottom-left i , .spotify-bottom-center i , .spotify-bottom-right i {
+   margin: 0 15px;
+}
+.spotify-bottom-center{
+   text-align: center;
+
+}
+.barra{
+   width: 600px;
+   background-color:#5B5B5B ;
+   border-radius: 20px;
+   height: 5px;
+   margin: 0 20px;
+}
+.barra div {
+   width: 20%;
+   height: 5px;
+   background-color: white;
+   border-radius: 20px;
+}
+
+.bar-music , .spotify-bottom-right{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.small{
+   width: 100px;
+
 
 }
 
-.my-row{
-
-
-} 
-
-.my-col{
-
-}
-
-
-
-
-
- /************************************************
-    SITE SECTIONS
- ************************************************/
-
-/* HEADER */
-
-
- /*  MAIN */
-
-
-  
-  /*  SECTION  */
 
  /************************************************
     RESPONSIVE
