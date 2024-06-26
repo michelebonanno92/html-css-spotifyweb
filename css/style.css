@@ -1,0 +1,86 @@
+/* 
+reset
+ */
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+general
+ */
+
+
+
+  /* Custom properties ( oppure variabili) */
+ :root {
+
+ }
+
+ /************************************************
+    UTILITIES
+ ************************************************/
+
+/* LAYOUT */
+
+.container{
+
+}
+
+.my-row{
+
+
+} 
+
+.my-col{
+
+}
+
+
+
+
+
+ /************************************************
+    SITE SECTIONS
+ ************************************************/
+
+/* HEADER */
+
+
+ /*  MAIN */
+
+
+  
+  /*  SECTION  */
+
+ /************************************************
+    RESPONSIVE
+ ************************************************/
+/* DESKTOP FIRST  */
+
+ /* DESKTOP */
+
+ @media screen and  ( max-width: 1100px ){
+
+  
+ 
+   }
+
+
+ /* TABLET  */
+ @media screen and  ( max-width: 700px ){
+  
+  
+
+   }
+
+    /* MOBILE  */
+ @media screen and  ( max-width: 600px ){
+  
+  
+
+ }
+
