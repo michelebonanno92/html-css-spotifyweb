@@ -4,66 +4,220 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Responsive Layout</title>
+        <!-- link font montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <!-- link Css -->
          <link rel="stylesheet" href="css/style.css">
          <!-- link Font Awesome -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <div class="container">
-            <div class="spotify-top">
-                <div class="sidebar">
-                    SIDEBAR
-                </div>
-                <div class="spotify-center">
-                    SPOTIFY-CENTER
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="spotify-bottom">
-                <div class="spotify-bottom-left">
-                     <img src="img/innuendo.jpeg" alt="Innuendo">
-                     <span>
-                        <h3>
-                             Innuendo
-                        </h3>
-                        <p>
-                            Brano Nome
-                        </p>
-                     </span>
-                   <i class="fa-regular fa-heart fa-2x"></i>
-                   <i class="fa-regular fa-folder fa-2x"></i>
-                </div>
-            
-                <div class="spotify-bottom-center">
-                    <div>
-                        <i class="fa-solid fa-shuffle fa-2x "></i>
-                        <i class="fa-solid fa-backward-step fa-2x"></i>
-                        <i class="fa-solid fa-circle-play fa-2x"></i>
-                        <i class="fa-solid fa-forward-step fa-2x"></i>
-                        <i class="fa-solid fa-arrow-rotate-right fa-2x"></i>
 
-                    </div>      
-                    <div class="bar-music">
-                       0:25
-                        <div class="barra">
-                            <div>
-                                
+        <!-- spotify top -->
+        <div class="spotify-top">
+            <div class="sidebar">
+                SIDEBAR
+            </div>
+            <div class="spotify-center">
+              <header>
+                    <a href="#" target="_blank">
+                        <button class="my-btn">
+                            EFFETTUA L'UPGRADE
+                        </button>
+                    </a>
+              </header>
+               <nav>
+                    <ul>
+                        <li> 
+                            <a href="#" target="_blank">
+                                IN EVIDENZA
+                            </a>
+                            <hr>
+                        </li>
+                        <li> 
+                            <a href="#" target="_blank">
+                                PODCAST
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="#" target="_blank">
+                                CLASSIFICHE
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="#" target="_blank">
+                                GENERI E MOOD
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="#" target="_blank">
+                                NUOVE USCITE
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="#" target="_blank">
+                                SCOPRI
+                            </a>
+                        </li>
+                    </ul>
+               </nav>
+               <main>
+                    <h2>
+                        Recently played
+                    </h2>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <img src="img/metal_lifting.jpg" alt="metal_lifting">
+                                <div>
+                                    <h4>
+                                        Heavy Metal
+                                    </h4>
+                                    <h5>
+                                        Subtitle
+                                    </h5>
+                                </div>
                             </div>
                         </div>
-                        4:35
-                    </div>              
-                </div>
-                <div class="spotify-bottom-right">
-                    <i class="fa-solid fa-bars"></i>
-                    <i class="fa-solid fa-desktop"></i>
-                    <i class="fa-solid fa-volume-high"></i>
-                    <div class="barra small">
-                        <div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="img/stranger.jpeg" alt="stranger">
+                                <div>
+                                    <h4>
+                                        Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)
+                                    </h4>
+                                    <h5>
+                                        Kyle Dixon & Michael Stein
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="img/aquietplace.jpeg" alt="aquietplace">
+                                <div>
+                                    <h4>
+                                       A quiet place
+                                    </h4>
+                                    <h5>
+                                      Subtitle
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="img/split.jpeg" alt="split">
+                                <div>
+                                    <h4>
+                                       Split
+                                    </h4>
+                                    <h5>
+                                        Subtitle
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="img/cure.jpeg" alt="cure">
+                                <div>
+                                    <h4>
+                                       A cure for wellness
+                                    </h4>
+                                    <h5>
+                                        Subtitle
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="img/sinister.jpeg" alt="sinistert">
+                                <div>
+                                    <h4>
+                                        Sinister
+                                    </h4>
+                                    <h5>
+                                        Subtitle
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    </div>
+
+                    <h2>
+                        Creato per John Doe
+                    </h2>
+                    <h5>
+                        Più ascolti, più accurati saranno i suggerimenti.
+                    </h5>
+                    <div class="row">
+                        <div class="col">
+                            
+                        </div>
+                        <div class="col">
                             
                         </div>
                     </div>
+
+                    <h2>
+                        Recently played
+                    </h2>
+                    <div class="row">
+                        <div class="col">
+                            
+                        </div>
+                        <div class="col">
+                            
+                        </div>
+                    </div>
+               </main>
+            </div>
+        </div>
+    
+        <!-- Spotify bottom -->
+        
+        <div class="spotify-bottom">
+            <div class="spotify-bottom-left">
+                    <img src="img/innuendo.jpeg" alt="Innuendo">
+                    <span>
+                    <h3>
+                            Innuendo
+                    </h3>
+                    <p>
+                        Brano Nome
+                    </p>
+                    </span>
+                <i class="fa-regular fa-heart "></i>
+                <i class="fa-regular fa-folder "></i>
+            </div>
+        
+            <div class="spotify-bottom-center">
+                <div class="flex">
+                    <i class="fa-solid fa-shuffle "></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                </div>  
+                <div class="flex">
+                  <span>0:25</span>
+                  <div class="barra">
+                    <div></div>
+                  </div>
+                  <span>4:35</span>
+                </div>    
+            </div>
+            <div class="spotify-bottom-right">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="barra small">
+                    <div> </div>
                 </div>
             </div>
         </div>
