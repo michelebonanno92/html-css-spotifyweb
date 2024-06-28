@@ -79,6 +79,9 @@ img{
 }
 
 /* SPOTIFY-CENTER*/
+.circle-img{
+   border-radius: 50%;
+}
 .spotify-top{
    display: flex;
    height: calc( 100vh - var(--height-spotify-bottom) );
@@ -253,18 +256,13 @@ main > *{
       width: calc(25% - 20px );
       margin-bottom: 170px;
    }
-  
- 
    }
-
 
  /* Secondo Step */
  @media screen and  ( max-width: 700px ){
       .col{
          width: calc(50% - 20px );
-     
       }
-
    }
 
     /* Terzo Step  */
@@ -275,6 +273,8 @@ main > *{
     .spotify-center{
       width: calc(100% - 50px );
    }
-
+   .col{
+      margin-bottom: 270px;
+   }
  }
 
