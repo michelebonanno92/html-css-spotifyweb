@@ -152,7 +152,10 @@ main{
     CENTER SIDEBAR
 ************************************************/
    .center-sidebar{
+      display: flex;
+      flex-direction: column;
       flex-grow: 1;
+      overflow: auto;
    }
    
    .center-sidebar > *{
@@ -180,21 +183,21 @@ main{
    }
 
    .center-sidebar nav {
+      display: flex;
+      flex-direction: column;
       flex-grow: 1;
       overflow: auto;
+  
    }
 /************************************************
       BOTTOM  SIDEBAR
  ************************************************/
    .bottom-sidebar{
       margin-bottom: 10px;
-      /* display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start; */
+      min-height: 100px;
+   
    }
    .bottom-sidebar div button{
-      /* border: none; */
       background-color: var(--color-sidebar);
       width: 10px;
 
@@ -478,6 +481,16 @@ main .row .col .card div h4{
    }
    .bottom-sidebar hr{
      display: none;
+   }
+   .center-sidebar *{
+      display: none;
+   }
+
+   .bottom-sidebar .align-element :last-child {
+      display: none;
+   }
+   .align-element img{
+      width: 100%;
    }
  
  } 
