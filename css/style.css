@@ -1,6 +1,6 @@
-/* 
-reset
- */
+ /************************************************
+    RESET
+ ************************************************/
   
 *{
     margin: 0;
@@ -9,9 +9,9 @@ reset
 }
 
 
-/* 
-general
- */
+ /************************************************
+      GENERAL
+ ************************************************/
  html{
    font-family: "Montserrat", sans-serif;
    scroll-behavior: smooth;
@@ -26,35 +26,28 @@ img{
    max-width: 100%;
 }
 
-.my-btn{
-   color: white;
-   background-color: #080B12;
-   border: 1px solid white;
-   padding: 15px 70px;
-   border-radius: 50px;
-   opacity: 1;
-   margin-right: 10px;
-   font-size: 1.2rem;
-   cursor: pointer;
+
+main{
+   padding: 20px;
+ }
+
+ .margin-bottom{
+   margin-bottom: -100px;
 }
 
-
-  /* Custom properties ( oppure variabili) */
+.opacity{
+   opacity: var(--opacity);
+}
+ /************************************************
+     Custom properties ( oppure variabili)
+ ************************************************/
  :root {
    --height-spotify-bottom: 100px ;
    --widht-sidebar: 200px ;
    --color-spotify-center: #141922;
- }
-
-
-
- h4{
-   font-size: 1.2rem;
- }
-
- h5{
-   font-size: 1rem;
-   opacity: 0.5;
+   --color-sidebar :#000000;
+   --color-hr: #B4FF30 ;
+   --opacity:0.5;
  }
 
  /************************************************
@@ -73,12 +66,195 @@ img{
    background-color: var(--color-spotify-center);
    margin: 0 10px;
    margin-bottom: 150px;
-   margin-top: 50px;
+   margin-top: 20px;
    text-align: center;
-
 }
 
-/* SPOTIFY-CENTER*/
+.my-btn{
+   color: white;
+   background-color: #080B12;
+   border: 1px solid white;
+   padding: 15px 70px;
+   border-radius: 50px;
+   margin-right: 10px;
+   font-size: 1.2rem;
+   cursor: pointer;
+}
+
+ /************************************************
+     SIDEBAR
+ ************************************************/
+.sidebar {
+   display: flex;
+   flex-direction: column;
+   background-color: var(--color-sidebar);
+   width:var(--widht-sidebar);
+   padding-left: 20px;
+   position: relative;
+}
+
+ /************************************************
+    TOP SIDEBAR
+ ************************************************/
+   .sidebar .top-sidebar ul, .sidebar .center-sidebar ul{
+      list-style: none ;
+
+   }
+
+   .top-sidebar nav ul  > :not(:first-child) {
+      opacity: var(--opacity);
+   }
+
+  .top-sidebar nav ul li button {
+      background-color: var(--color-sidebar);
+      border: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+   }
+
+   .top-sidebar nav ul li button > *{
+      padding-right: 5px;
+      padding-bottom: 10px;
+   }
+   .top-sidebar nav ul li button img{
+      width: 20%;
+   }
+   
+   #hr-column{
+      display: flex;
+   }
+
+   #hr-column hr{
+      position: absolute;
+      left: 0;
+      top: 90px;
+      border: 2px  solid  var(--color-hr) ;
+      border-radius: 10px;
+      height: 45px;
+   }
+   
+   #logo{
+      padding: 20px 0;
+      width: 170px;
+      cursor: pointer;
+   }
+   #logo-small{
+      display: none;
+     
+   }
+   .top-sidebar{
+      margin-bottom: 20px ;
+   }
+
+/************************************************
+    CENTER SIDEBAR
+************************************************/
+   .center-sidebar{
+      flex-grow: 1;
+   }
+   
+   .center-sidebar > *{
+      margin-bottom: 10px;
+   }
+
+   #box-grey{
+      background-color: #A3A3A3;
+      width: 40px;
+      height: 40px;
+      font-size: 2rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+   }
+
+   .center-sidebar nav ul li a{
+      text-decoration: none;
+      color:white;
+      opacity: var(--opacity);
+      margin: 20px 0 ;
+   }
+   .center-sidebar nav ul li {
+      margin-bottom: 15px;
+   }
+
+   .center-sidebar nav {
+      flex-grow: 1;
+      overflow: auto;
+   }
+/************************************************
+      BOTTOM  SIDEBAR
+ ************************************************/
+   .bottom-sidebar{
+      margin-bottom: 10px;
+      /* display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start; */
+   }
+   .bottom-sidebar div button{
+      /* border: none; */
+      background-color: var(--color-sidebar);
+      width: 10px;
+
+   }
+   .bottom-sidebar div button img{
+      width: 15%;
+      margin-left: -5px;
+   }
+
+   .bottom-sidebar hr{
+      width: 160px;
+      margin: 20px 0 ;
+   }
+   .align-element {
+      display: flex;
+      align-items: center; 
+      justify-content: flex-start;
+      cursor: pointer;
+   }
+   .align-element img{
+      width: 15%;
+   }
+   
+   .align-element  > *{
+      margin-right: 10px;
+   }
+
+   #John-Doe{
+      width: 30px;
+      height: 30px;
+      background-color:#808080;
+      border-radius: 50%;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   #John-Doe img{
+      width:70% ;
+   }
+
+/************************************************
+   SPOTIFY CENTER
+ ************************************************/
+
+main h2{
+   margin-bottom: 20px;
+ }
+
+main .row .col .card div h4{
+   font-size: 1.2rem;
+   margin-bottom: 10px;
+ }
+
+ main .row .col .card div h5{
+   font-size: 1rem;
+   opacity: var(--opacity);
+ }
+
 .circle-img{
    border-radius: 50%;
 }
@@ -86,10 +262,6 @@ img{
    display: flex;
    height: calc( 100vh - var(--height-spotify-bottom) );
  
-}
-.sidebar{
-   background-color: #000000;
-   width:var(--widht-sidebar)
 }
 
 .spotify-center{
@@ -110,58 +282,47 @@ img{
    align-items: center;
 }
 
-.spotify-center > *{
-   margin-bottom: 20px;
-}
 
-nav ul li a{
+.spotify-center nav ul li a{
    text-decoration: none;
    color: white;
-   opacity: 0.7;
+   opacity: var(--opacity);
    font-size: 1.3rem;
    padding: 0 10px;
 }
-nav{
+
+.spotify-center nav{
    display: flex;
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
 }
 
-nav ul  li hr{
-   border-color:#B4FF30 ;
+.spotify-center nav ul  li hr{
+   border-color:var(--color-hr);
    margin-top: 10px;
    width: 60px;
    margin-left: 50px;
 }
-nav ul {
+.spotify-center nav ul {
    list-style: none ;
    display: flex;
    flex-wrap: wrap;
 }
     
-nav ul li {
+.spotify-center nav ul li {
    padding: 10px;
    vertical-align: middle;
-
 }
 
-main{
-   padding: 20px;
-}
-main > *{
-   padding-bottom: 20px;
-}
 .card img{
    width: 100%;
    padding-bottom: 20px;
 }
 
-.card div  > *{
-   padding-bottom: 20px;
-}
-
-/* SPOTIFY-BOTTOM*/
+ /************************************************
+    SPOTIFY BOTTOM
+ ************************************************/
 
 .spotify-bottom{
    background-color: #272727;
@@ -170,6 +331,8 @@ main > *{
    justify-content: space-between;
    align-items: center;
    padding: 0 20px;
+   position: relative;
+   z-index: 1;
 }
 
 .spotify-bottom-left{
@@ -187,7 +350,7 @@ main > *{
    margin-right: 7px;
 }
 .spotify-bottom-left p , .spotify-bottom-left i{
-   opacity: 0.7;
+   opacity: var(--opacity);
 }
 
 .spotify-bottom-left span{
@@ -254,7 +417,10 @@ main > *{
  @media screen and  ( max-width: 1100px ){
    .col{
       width: calc(25% - 20px );
-      margin-bottom: 170px;
+      margin-bottom: 250px;
+   }
+   .margin-bottom{
+      margin-top: -100px ;
    }
    }
 
@@ -262,6 +428,13 @@ main > *{
  @media screen and  ( max-width: 700px ){
       .col{
          width: calc(50% - 20px );
+      }
+      .col{
+         margin-bottom: 240px;
+      }
+      .margin-bottom{
+         margin-bottom: -60px ;
+         margin-top: -40px;
       }
    }
 
@@ -274,7 +447,38 @@ main > *{
       width: calc(100% - 50px );
    }
    .col{
-      margin-bottom: 270px;
+      margin-bottom: 280px;
    }
- }
+   .margin-bottom{
+      margin-bottom: -40px ;
+   }
+   #logo{
+     display: none;
+   }
+   #logo-small{
+      display: block;
+      width: 80%;
+      cursor: pointer;
+   }
+
+   .top-sidebar nav ul li button :last-child{
+      display: none;
+   }
+   .top-sidebar nav ul li button img{
+      width: 100%;
+   }
+   .sidebar{
+      padding: 10px;
+   }
+   #hr-column hr{
+      display: none ;
+   }
+   #logo-small{
+      margin-bottom: 20px;
+   }
+   .bottom-sidebar hr{
+     display: none;
+   }
+ 
+ } 
 
