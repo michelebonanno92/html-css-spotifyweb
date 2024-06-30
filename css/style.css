@@ -68,17 +68,22 @@ main{
    margin-bottom: 150px;
    margin-top: 20px;
    text-align: center;
+   position: relative;
 }
 
-.my-btn{
-   color: white;
-   background-color: #080B12;
-   border: 1px solid white;
-   padding: 15px 70px;
-   border-radius: 50px;
-   margin-right: 10px;
-   font-size: 1.2rem;
-   cursor: pointer;
+ /************************************************
+     HOVER 
+ ************************************************/
+.hover-img{
+   position: absolute;
+   top: 45%;
+   left: 50%;
+   transform: translate( -50%, -50%);
+   display: none;
+}
+
+.card:hover .hover-img{
+   display: block;
 }
 
  /************************************************
@@ -96,23 +101,27 @@ main{
  /************************************************
     TOP SIDEBAR
  ************************************************/
-   .sidebar .top-sidebar ul, .sidebar .center-sidebar ul{
-      list-style: none ;
-
+  .top-sidebar nav  button:hover {
+      color: white;
    }
 
-   .top-sidebar nav ul  > :not(:first-child) {
-      opacity: var(--opacity);
+   .sidebar .top-sidebar ul, .sidebar .center-sidebar ul{
+      list-style: none ;
    }
 
   .top-sidebar nav ul li button {
       background-color: var(--color-sidebar);
       border: none;
-      color: white;
       display: flex;
       align-items: center;
       cursor: pointer;
+      color: grey;
    }
+
+   .text-white{
+      color: white;
+   }
+
 
    .top-sidebar nav ul li button > *{
       padding-right: 5px;
@@ -140,6 +149,7 @@ main{
       width: 170px;
       cursor: pointer;
    }
+   
    #logo-small{
       display: none;
      
@@ -156,6 +166,11 @@ main{
       flex-direction: column;
       flex-grow: 1;
       overflow: auto;
+   }
+
+   .center-sidebar > * :hover , .box-grey :hover {
+      opacity: 1;
+      color: white;
    }
    
    .center-sidebar > *{
@@ -187,7 +202,6 @@ main{
       flex-direction: column;
       flex-grow: 1;
       overflow: auto;
-  
    }
 /************************************************
       BOTTOM  SIDEBAR
@@ -196,11 +210,6 @@ main{
       margin-bottom: 10px;
       min-height: 100px;
    
-   }
-   .bottom-sidebar div button{
-      background-color: var(--color-sidebar);
-      width: 10px;
-
    }
    .bottom-sidebar div button img{
       width: 15%;
@@ -225,6 +234,10 @@ main{
       margin-right: 10px;
    }
 
+   .bottom-sidebar  > * :hover{
+      opacity: 1;
+   }
+
    #John-Doe{
       width: 30px;
       height: 30px;
@@ -239,6 +252,14 @@ main{
    #John-Doe img{
       width:70% ;
    }
+ /************************************************
+   SPOTIFY TOP
+ ************************************************/
+ .spotify-top{
+   display: flex;
+   height: calc( 100vh - var(--height-spotify-bottom) );
+ 
+}
 
 /************************************************
    SPOTIFY CENTER
@@ -261,11 +282,6 @@ main .row .col .card div h4{
 .circle-img{
    border-radius: 50%;
 }
-.spotify-top{
-   display: flex;
-   height: calc( 100vh - var(--height-spotify-bottom) );
- 
-}
 
 .spotify-center{
    background-color: #141922;
@@ -273,7 +289,7 @@ main .row .col .card div h4{
    overflow-y: auto;
 }
 
-.spotify-top header{
+.spotify-center header{
    color: white;
    height: 100px;
    position: sticky;
@@ -285,13 +301,31 @@ main .row .col .card div h4{
    align-items: center;
 }
 
+.my-btn{
+   color: white;
+   background-color: #080B12;
+   border: 1px solid white;
+   padding: 15px 70px;
+   border-radius: 50px;
+   margin-right: 20px;
+   font-size: 1.2rem;
+   cursor: pointer;
+}
+
+.my-btn:hover{
+   transform: scale(1.1);
+   transition-duration: 1s;
+}
 
 .spotify-center nav ul li a{
    text-decoration: none;
    color: white;
    opacity: var(--opacity);
-   font-size: 1.3rem;
    padding: 0 10px;
+}
+
+.spotify-center nav > * :hover{
+   opacity: 1;
 }
 
 .spotify-center nav{
@@ -307,6 +341,7 @@ main .row .col .card div h4{
    width: 60px;
    margin-left: 50px;
 }
+
 .spotify-center nav ul {
    list-style: none ;
    display: flex;
@@ -322,7 +357,6 @@ main .row .col .card div h4{
    width: 100%;
    padding-bottom: 20px;
 }
-
  /************************************************
     SPOTIFY BOTTOM
  ************************************************/
@@ -352,6 +386,7 @@ main .row .col .card div h4{
 .spotify-bottom-left > *{
    margin-right: 7px;
 }
+
 .spotify-bottom-left p , .spotify-bottom-left i{
    opacity: var(--opacity);
 }
